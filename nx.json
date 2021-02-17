@@ -1,0 +1,26 @@
+{
+  "npmScope": "tren-app",
+  "affected": { "defaultBase": "master" },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+    }
+  },
+  "projects": {
+    "tren-app": { "tags": [] },
+    "tren-app-e2e": { "tags": [], "implicitDependencies": ["tren-app"] },
+    "api": { "tags": [] },
+    "api-interfaces": { "tags": [] },
+    "landing-page": { "tags": [] },
+    "shared-core": { "tags": [] }
+  }
+}
